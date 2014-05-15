@@ -1,0 +1,59 @@
+\section{Nichtfunktionale Anforderungen}
+
+\subsection{Allgemeine Ziele}
+\begin{requirements}
+	\req{NF110} Die Navigation durch das Spiel ist intuitiv, sowohl für Kinder als auch Erwachsene.
+	\req{NF120} Das Spiel ist insgesamt kindgerecht entworfen, d.h.:
+		\begin{itemize}
+			\item Piktogramme werden überall wo möglich verwendet.
+			\item Schrift, insbesondere auch "`$\lambda$"', wird so weit es geht vermieden.
+			\item Falls vorhanden, wird jeglicher Text so einfach wie möglich verfasst (keine Fachbegriffe, Fremdwörter, obszöne Sprache).
+		\end{itemize}
+\end{requirements}
+
+\subsection{Benutzbarkeit, Performance und Stabilität}
+\begin{requirements}
+	\req{NF220} Die Ladezeiten der Levels beträgt durchweg unter 10 Sekunden.
+	\req{NF230} Die Simulation und deren Animationen verlaufen auf aktueller Hardware flüssig.
+	\req{NF240} Es wird auf immer wiederkehrende Animationen, die den Spielfluss unterbrechen, verzichtet.
+	\req{NF250} Das Spiel läuft stabil; es gilt:
+		\begin{itemize}
+			\item das Spiel verhält sich zu jeder Zeit vorhersehbar.
+			\item alle (Folge-)Zustände und Übergänge sind zu jeder Zeit definiert.
+			\item unerwartete Eingaben, Zustände und externe Programmunterbrechungen werden abgefangen.
+			\item es geschieht höchstens einmal in 5 Stunden Nutzung ein unerwartetes Beenden der App.
+			\item es gibt definierte Grenzen in denen das Programm stabil läuft. Diese Grenzen lauten:
+				\begin{itemize}
+					\item Es sind zusammen höchstens 300 Alligatoren und Eier auf dem Spielfeld.
+				\end{itemize}
+		\end{itemize}
+\end{requirements}
+
+\subsection{Qualität und Rechtliches}
+\begin{requirements}
+	\req{NF310} Die im Zuge des Projekts erstellten Artefakte (Assets, Code, Daten) sind gut
+		\begin{itemize}
+			\item zu warten (Einhaltung des Eclipse Codestils).
+			\item zu erweitern (Modularer Aufbau).
+			\item dokumentiert (Javadoc).
+			\item mit Testfällen abgedeckt (jUnit, Emma >= 70\%).
+		\end{itemize}
+	\req{NF320} Die Software setzt auf marktübliche Standards und Formate. Dies sind:
+		\begin{itemize}
+			\item SVG Format für Vektorgrafiken.
+			\item PNG Format für Pixelgrafiken.
+			\item WAV, OGG und/oder MP3 für Audiodateien.
+			\item XML und/oder JSON für hierarchisch strukturierte Daten in Textdateien.
+		\end{itemize}
+	\req{NF330} Eine kommerzielle Veröffentlichung des Produkts ist möglich, u.a. gilt:
+		\begin{itemize}
+			\item benutzte Assets und Bibliotheken sind kommerziell nutzbar.
+			\item es finden sich Hinweise auf die jeweiligen Urheber und Lizenzen im Programm.
+		\end{itemize}
+	\req{NF340} Das Spiel verlangt vom Nutzer nur die nötigsten Daten und Berechtigungen. Das sind:
+		\begin{itemize}
+			\item [+] Nutzername für das Profil.
+			\item [+] Android Berechtigung READ\_EXTERNAL\_STORAGE: Exportierte Sandboxdateien lesen.
+			\item [+] Android Berechtigung WRITE\_EXTERNAL\_STORAGE: Exportierte Sandboxdateien schreiben.
+		\end{itemize}
+\end{requirements}

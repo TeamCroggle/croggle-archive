@@ -1,0 +1,71 @@
+\section{Package: game.board.operations}
+\subsection{CollectBoundColorsTest}
+	\begin{description}
+		\item[testSimpleBoundColor] Überprüft an einem einfachen Beispiel, ob die Anzahl der Farben im \emph{Board} richtig
+			berechnet wird und die richtigen Farben erkannt werden.
+		\item[testRootBoundColor] Überprüft ob erkannt wird, dass das \emph{Board} selbst keine Farbe hat. 
+		\item[testMultipleBoundColor] Überprüft, ob auch bei einem \emph{Board} mit mehreren Farben die Anzahl und Art der 
+			Farben richtig erkannt wird.
+		\item[testBoundColorsMultipleOccurences]Überprüft, ob Anzahl und Farbe der Farben richtig erkannt wird, wenn mehrere 
+			Farben mehrmals im \emph{Board} vorkommen. 
+	\end{description}
+
+\subsection{CollectFreeColorsTest}
+	\begin{description}
+		\item[testSimpleFreeColor] Überprüft die Erkennung eines freistehenden gefärbten Eis und dessen Farbe.
+		\item[testSimpleNonFreeColor] Überprüft ob nicht alleine stehende Eier als solche erkannt werden.
+		\item[testRootFreeColor]Überprüft, dass das \emph{Board} nicht als alleine stehendes Ei erkannt wird.
+		\item[testFreeColorWithParent] Überprüft die Erkennung eines anders als sein Parent gefärbten Eis und dessen Farbe.
+		\item[testMultipleFreeColors] Überprüft die Erkennung von mehreren anders als die jeweiligen Parents gefärbten Eiern 
+			und deren Farbe.
+		\item[testFreeColorMultipleOccurences]Überprüft die Erkennung von mehreren anders als die jeweiligen Parents gefärbten 
+			Eiern und deren Farbe, auch wenn diese mehrmals auftritt.
+	\end{description}
+
+\subsection{CreateDepthMapTest}
+	\begin{description}
+		\item[testSimple] Überprüft an einem einfachen Beispiel ob für jedes \emph{BoardObject} erkannt wird in welcher Ebene 
+			des Baumes es liegt.
+	\end{description}
+
+\subsection{CreateHeightMapTest}
+	\begin{description}
+		\item[testSimple] Überprüft an einem einfachen Beispiel ob für jedes \emph{BoardObject} erkannt wird wie hoch es ist.
+		\item[testCase0] Überprüft ob die Höhe eines \emph{Boards} richtig berechnet wird.
+	\end{description}
+
+\subsection{CreateWidthMapTest}
+	\begin{description}
+		\item[testSimple] Überprüft an einem einfachen Beispiel ob für jedes \emph{BoardObject} erkannt wird wie breit es ist.
+		\item[testCase0] Überprüft ob die Breite eines \emph{Boards} richtig berechnet wird.
+	\end{description}
+
+\subsection{ExchangeColorTest}
+	\begin{description}
+		\item[testSimple] Überprüft an einem einfachen Beispiel ob das umfärben \emph{BoardObjects}  richtig funktioniert.
+	\end{description}
+
+\subsection{FindEatingTest}
+	\begin{description}
+		\item[testSimple] Überprüft an einem einfachen Beispiel ob das Finden des \emph{Alligators}, der als nächstes fressen 				kann, funktioniert.
+		\item[testPrecedence]Überprüft ob der richtige \emph{Alligator}, als derjenige der als nächstes fressen kann, 
+			zurückgegeben wird an einem komplizierterem Beispiel.
+	\end{description}
+\subsection{FlattenTreeTest}
+	\begin{description}
+		\item[testSimple] Überprüft die Kompirimierung des \emph{Boards} als Liste.
+	\end{description}
+\subsection{GetParentHierachyTest}
+	\begin{description}
+		\item[testSimple] Überprüft an einem einfachen Beispiel ob für ein Kind die richtige Parent Hierachie zurückgegeben 
+			wird.
+	\end{description}
+\subsection{ReplaceEggsTest}
+	\begin{description}
+		\item[testSimple] Überprüft an einem einfachen Beispiel ob das Ersetzten der Eier eines Alligators korrekt 
+			funktioniert.
+		\item[testSimpleRecolorFree]Überprüft an einem einfachen Beispiel ob das Ersetzten der Eier eines Alligators korrekt 
+			funktioniert, wenn keine Umfärbungen nötig sind.
+		\item[testSimpleRecolorBound]Überprüft an einem einfachen Beispiel ob das Ersetzten der Eier eines Alligators korrekt 
+			funktioniert, wenn Umfärbungen nötig sind.
+	\end{description}

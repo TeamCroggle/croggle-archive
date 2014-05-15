@@ -1,0 +1,150 @@
+\section{Package: game.achievement}
+
+\subsection{Achievement}
+
+\subsubsection{Hinzugefügte Methoden}
+
+\begin{description}
+	\item[Getter und Setter]
+	Getter für \emph{Index}, \emph{Stage} und \emph{NumberOfStages}, sowie Setter für \emph{Index}, \emph{Description}, \emph{EmblemPathAchieved}, \emph{EmblemPathNotAchieved}, \emph{Id} und \emph{Stages} wurden hinzugefügt.
+	
+	\item[initialize]
+	Abstrakte Methode zur Initialisierung eines \emph{Achievements} wurde hinzugefügt.
+
+	
+\end{description}
+
+
+
+\subsubsection{Modifizierte Methoden}
+
+\begin{description}
+	\item[getEmblemPath]
+	Methode wurde aufgespalten in \emph{getEmblemPathAchieved} und \emph{getEmblemPathNotAchieved}.
+	
+	\item[requirementsMet]
+	Methode bekommt jetzt zwei Argumente: \emph{Statistic} statistic und \emph{Statistic} statisticDelta.
+\end{description}
+
+
+\subsection{AchievementController}
+Implementiert nun nicht mehr \emph{StatisticsDeltaProcessor}.
+
+\subsubsection{Hinzugefügte Methoden}
+
+\begin{description}
+	\item[updateAchievements]
+	Korrigiert die Indices der \emph{AvailableAchievements}, gibt diese zurück und fügt Änderungen den neusten Änderungen hinzu.	
+	
+	\item[convertInputFromDataBase]
+	Konvertiert die Eingabe in eine Liste von \emph{Achievements} mit richtigen Indices und gibt diese zurück.
+
+	\item[processStatisticChange]
+	Ersetze \emph{processDelta} mit \emph{processStatisticChange}.
+	
+\end{description}
+
+
+
+\subsubsection{Modifizierte Methoden}
+
+\begin{description}
+	\item[initializeAvailableAchievements]
+	Sichtbarkeit von public zu private geändert.
+	
+	\item[requirementsMet]
+	Entsprechend dem Interface geändert.	
+\end{description}
+
+
+
+\subsection{AchievementFactory}
+Neu hinzugefügt.
+Erstellen von sowohl den einzelnen \emph{Achievements} als auch der \emph{AvailableAchievements} ausgelagert mit dem Factory Entwurfsmuster.
+
+\subsubsection{Hinzugefügte Methoden}
+
+\begin{description}
+	\item[createAchievement]
+	Bekommt eine Id und gibt ein neues, initialisiertes \emph{Achievement} des entsprechenden Typs zurück.
+
+	\item[createListOfAchievementTypes]
+	Gibt eine Liste mit einem neu initialisiertem \emph{Achievement} von jedem Typ zurück.
+
+\end{description}
+
+
+\subsection{AlligatorsEatenAchievement}
+
+\subsubsection{Modifizierte Methoden}
+
+\begin{description}
+	\item[requirementsMet]
+	Entsprechend dem Interface geändert.
+\end{description}
+
+\subsection{AlligatorsEatenPerLevelAchievement}
+
+\subsubsection{Modifizierte Methoden}
+
+\begin{description}
+	\item[requirementsMet]
+	Entsprechend dem Interface geändert.
+\end{description}
+
+\subsection{AlligatorsPlacedAchievement}
+
+\subsubsection{Modifizierte Methoden}
+
+\begin{description}
+	\item[requirementsMet]
+	Entsprechend dem Interface geändert.
+\end{description}
+
+\subsection{AlligatorsPlacedPerLevelAchievement}
+
+\subsubsection{Modifizierte Methoden}
+
+\begin{description}
+	\item[requirementsMet]
+	Entsprechend dem Interface geändert.
+\end{description}
+
+\subsection{HintPerLevelAchievement}
+
+\subsubsection{Modifizierte Methoden}
+
+\begin{description}
+	\item[requirementsMet]
+	Entsprechend dem Interface geändert.
+\end{description}
+
+\subsection{LevelAchievement}
+
+\subsubsection{Modifizierte Methoden}
+
+\begin{description}
+	\item[requirementsMet]
+	Entsprechend dem Interface geändert.
+\end{description}
+
+\subsection{PerLevelAchievement}
+
+\subsubsection{Modifizierte Methoden}
+
+\begin{description}
+	\item[requirementsMet]
+	Entsprechend dem Interface geändert.
+\end{description}
+
+\subsection{TimeAchievement}
+
+\subsubsection{Modifizierte Methoden}
+
+\begin{description}
+	\item[requirementsMet]
+	Entsprechend dem Interface geändert.
+\end{description}
+
+
+
