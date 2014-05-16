@@ -1,0 +1,19 @@
+\chapter{Testwerkzeuge}
+Um während der Fehlersuche bei auftretenden Problemen schnell das betroffene Systemsegment zu lokalisieren, aber auch um tatsächlich die Qualität des Produkts für die Zukunft zu sichern, wurden während der Phase verschiedene weiter Werkzeuge eingesetzt.
+Diese werden im Folgenden erklärt und deren Einsatz für etwaige zukünftige Wartungsarbeiten bzw. Produkterweiterungen dokumentiert.
+
+\section{EclEmma}
+Mit EclEmma konnte während der Entwicklung der Testfälle in Echtzeit die Überdeckung der einzelnen Codezeilen überprüft werden.
+Zudem wurden mit dem Werkzeug einige der Überdeckungsreports aufgezeichnet und nach HTML exportiert.
+
+\section{monkey}
+monkey eignet sich vor allem dazu, zu testen wie sich eine gerade laufende Applikation bei scheinbar zufälligen und hochfrequenten Benutzereingaben verhält.
+In unserem Projekt wurde das Werkzeug vor allem für reproduzierbare Stresstest verwendet.
+
+\section{monkeyrunner}
+monkeyrunner wurde in der Qualitätssicherungsphase vor allem dazu verwendet, Testszenarien aus dem Pflichtenheft zu automatisieren und ohne die Aufsicht eines Entwicklers zu benötigen nachzustellen.
+So wurden unter anderem die im Pflichtenheft beschriebenen Funktionssequenzen vollständig durch das Werkzeug automatisiert.
+
+\section{SQLite Manager}
+Mithilfe des SQLite Managers konnten die im Pflichtenheft garantierten Datenkonsistenzen anhand des während der Implementierungsphase entstandenen Datenbankschemas überprüft werden.
+Zudem war es möglich, Probleme bei Inkonsistenzen innerhalb der Datenbank schnell reproduzieren zu können.

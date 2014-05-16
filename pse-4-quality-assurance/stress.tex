@@ -1,0 +1,11 @@
+\chapter{Lasttests}
+\begin{description}
+	\item[Expandierende Ausdrücke] Die Auswertung eines immer weiter wachsenden Lambda-Terms wird im Simulator in einer Endlosschleife weitergeführt. 
+		Wo zu Beginn noch häufig StackOverflowExceptions auftraten, wird die Simulation nun durch die Einhaltung der Maximalzahl an Elementen (300) begrenzt.
+		
+		\item[Große Ausdrücke] Die Auswertung von Lambda-Termen, welchen durch sehr viele Alligatoren und Eier präsentiert wurden, wurde simuliert. 
+		Dabei konnte es zu erhebliche Performanceeinbußen kommen, in manchen Fällen dauerte es über eine Minute bis ein einzelner Auswertungsschritt vollständig abgearbeitet und simuliert wurde. In dieser Zeit fror der Bildschirm ein und der Benutzer erhielt keine Rückmeldung über die Gründe für dieses Verhalten. Als Hauptlast stellte sich das schreiben eines JSON Strings heraus, welcher zum Wiederherstellen des Zustands nach dem Pausieren oder dem Beenden der Applikation verwendet wurde. Die Methoden zum Schreiben des Strings wurde überarbeitet und in einen eigenen Thread ausgelagert, was die Performance deutlich verbesserte.
+		
+		\item[Willkürliche Bildschirmeingaben] Mithilfe des monkey Werkzeugs wurde getestet wie sich die Applikation bei zufälligen und hochfrequenten Bildschirmeingaben verhält. Beim mehrmaligen Testläufen mit unterschiedlichen Event Sequenzen konnten keine Auffälligkeiten festgestellt werden, es kam zu keinen Abstürzen oder sonstigen unerwarteten Verhaltensweisen.
+		
+\end{description}

@@ -1,0 +1,31 @@
+\chapter{Systemtests}
+
+Die im Pflichtenheft aufgeführten Funktionssequenzen konnten mithilfe des monkeyrunner Werkzeugs automatisiert werden. Für jede einzelne Sequenz wurde ein eigenes Python Programm erstellt, in dem auch die Vorbedingungen, zum Beispiel das beim Start des Testfalls ein bestimmter Bildschirm angezeigt oder eine bestimmte Anzahl an Benutzter im System gespeichert sind, aufgeführt sind. Bei allen Tests ist vorausgesetzt, dass Croggle auf dem Gerät installiert ist und sich in der Anwendung befindet. Die Benennung der Testszenarien orientiert sich dabei am Pflichtenheft, das Programm zum Testszenario "`Ein Benutzerprofile erstellen (T110)"' hat so etwa den Namen "`t110.py"'. Alle im Pflichtenheft beschriebenen Funktionssequenzen konnten erfolgreich durchlaufen werden, wobei es zu kleinen Anpassungen an die letztendliche Implementierung zu Croggle kam. Diese Veränderungen traten in folgenden Szenarien auf:  
+
+\begin{itemize}
+   \item "`Ein Benutzerprofil erstellen (T130)"': Im dieser Funktionssequenz wurde beschrieben, dass der Benutzer um seinen Namen zu ändern auf seinen angezeigten Benutzernamen klickt. In der jetzigen Fassung von Croggle wird kein Benutzernamen mehr angezeigt, der Anwender klickt stattdessen auf einen Button mit der Beschriftung "`Umbenennen"'. Gleiches gilt für das Ändern des Profilbilds, im Pflichtenheft wurde das Fenster zur Änderung über den Klick auf ein angezeigtes Profilbild erreicht. Dieses Bild wurde durch einen Button mit der Aufschrift "`Avatar ändern"' ersetzt. 
+  
+   \item "`Ein Benutzerprofil löschen (T130)"': Hier wurde angenommen, dass man nach dem Löschen eines Profils direkt in das Hauptmenü wechselt. Dies wurde geändert, um Zustände zu vermeiden in denen es kein aktives Profil gibt, da hier zum Beispiel nicht definiert ist, ob und wohin Änderungen an den Einstellungen oder Fortschritte bei Levels gespeichert werden. Nach dem Löschen eines Profils wechselt der Benutzer deshalb nun in die Listenansicht zur Auswahl eines Profils und kann so ein neues Profil erstellen oder sich mit einem bereits bestehenden anmelden.
+   
+    \item "`Den Simulationsmodus bedienen (T170)"': Der hier aufgeführte "`Schneller"'-Button wurde mit dem "`Langsamer"'-Button durch einen Schieberegler zur Einstellung der Simulationsgeschwindigkeit ersetzt, was die Bedienung vereinfacht hat.
+   
+   
+\end{itemize}
+
+Die im Pflichtenheft beschriebenen Funktionssequenzen wurden durch Folgende ergänzt:
+
+\begin{itemize}
+   \item "`Ein MultipleChoice Level verlieren (T200)"': Der Anwender hat Level 4 Paket 2 frisch geladen. Die Aktionen des Benutzers bestehen in diesem Szenario aus dem anzeigen lassen des auszuwertenden Ausdrucks, der Wahl mehrere Antwortmöglichkeiten, dem Start und der Ausführung der Simulation und letztendlich dem Neustart des Levels.
+  
+      \item "`Ein Edit Level gewinnen (T210)"': Der Spieler hat ein neues Profil erstellt, hat Level 1 Paket 1 geladen und befindet sich so im Platziermodus. Er lässt sich nun den Zielzustand anzeigen, färbt das präsentierte Ei ein, simuliert die Auswertung des erstellten Ausdrucks und gewinnt so das Level. Er schaut sich sein freigeschaltetes Achievement an und startet dann das nächste Level.
+  
+   \item "`Freigeschaltet Achievements anschauen (T220)"': Der Benutzer befindet sich im Hauptmenü und wechselt über einen Klick auf den entsprechenden Button in den Achievements-Bildschirm. Hier wählt er mehrere der angezeigten Achievements aus und bekommt so Informationen über diese präsentiert. Anschließend kehrt er wieder in das Hauptmenü zurück.
+  
+   \item "`Den Credit Bildschirm aufrufen (T230)"': Vom Hauptmenü aus wechselt der Anwender durch einen Klick auf das Croggle Logo in den Credit Bildschirm, welchen er anschließend wieder verlässt.
+   
+   \item "`Die Applikation beenden (T240)"': Im Hauptmenü drückt der Anwender die Android Zurück-Button und bekommt so einen Dialog präsentiert in dem er gefragt wird, ob er die Applikation verlassen will. Dies bestätigt er und Croggle wird so beendet.
+   \end{itemize}
+   
+
+   
+   

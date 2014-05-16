@@ -1,0 +1,22 @@
+\chapter{Glossar}
+Im Folgenden befindet sich eine Übersicht mit in diesem Doument verwendeten Fachbegriffen und dazugehörigen Erklärungen.
+\begin{description}
+	\item[Apk] Abkürzung für "`Android Package"'. Beschreibt das Format, in dem für Android zusammengestellte Programmpakete gepackt und ausgeliefert werden.
+	\item[V-Modell] von Barry Boehm im Jahre 1979 vorgestellte und das Wasserfallmodell erweiternde Herangehensweise an den Softwareentwicklungsprozess, der hauptsächlich die Phasen Implementierung und Test um weitere Ergebnisartefakte ergänzt.
+	\item[EclEmma] kostenloses Eclipse-Plug-In, mithilfe dessen man sehr einfach und schnell die Codeabdeckung von Java-Programmen ermitteln kann.
+		Direkt nach der Installation kann der Benutzter zum Beispiel JUnit-Tests oder lokale Java Applikationen durch eine vorhandene oder neu erstellten Run-Konfiguration als "`Coverage"' starten und bekommt so nach deren Terminierung einen Bericht über die Codeabdeckung des Programms präsentiert.
+		In diesem wird ausführlich aufgeführt, wie viel und welcher Code in den jeweiligen Paketen und Klassen überdeckt wurde. 
+		Außerdem wird dem Benutzer direkt in der Eclipse-Entwicklungsumgebung farblich angezeigt welche Codeabschnitte durchlaufen und welche nicht erreicht werden konnten.
+		EclEmma bietet desweiteren die Möglichkeit, verschiedene Berichte zusammenzufassen und Berichte direkt als HTML Report oder XML Datei zu exportieren.
+	\item[monkey Tool] ein im Android SDK enthaltenes Kommandozeilenwerkzeug, das dazu genutzt werden kann zufällige Benutzereingaben zu simulieren.
+		Es läuft auf dem Emulator oder einem Android-Gerät und kann eine Sequenz von pseudozufällig erzeugten Events wie Touch- oder Klickeingaben erzeugen.
+		Der Anwender hat dabei die Möglichkeit die Rahmenbedingungen für einen Lauf des monkey-Tools zu setzen.
+		So kann er unter anderem die Anzahl oder den Typ der erzeugten Events über die Kommandozeile bestimmen.
+		Außerdem hat er die Möglichkeit den "`Seed"', welcher für die Erzeugung der pseudozufälligen Events verwendet wird, zu modifizieren, wodurch er sicherstellen kann, dass bei jeder Ausführung die gleichen Events ausgelöst werden.
+	\item[monkeyrunner] ein in der Android SDK mitgeliefertes Werkzeug, das genau wie monkey dazu verwendet werden kann Benutzereingaben außerhalb von Android Code zu simulieren.
+		Im Gegensatz zu monkey sind diese Eingaben aber nicht zufällig, monkeyrunner bietet vielmehr eine API mit der man Python Programme erstellen kann, welche zum Beispiel Click oder Drag and Drop Gesten an gewählten Bildschirmkoordinaten simulieren können.
+		Über die Programme kann der Anwender zum Beispiel auch das Drücken der "`Back"' und der "`Home"' Taste simulieren, Screenshots vom gerade angezeigten Bildschirm aufnehmen oder eine apk installieren und das installierte Programm dann abschließend ausführen.
+	\item[SQLite Manager] Firefox Add-on, mithilfe dessen man den Inhalt von SQLite Datenbanken einfach visualisieren und bearbeiten kann.
+		Nach der Installation kann der Benutzer über eine grafische Benutzeroberfläche eine Verbindung mit einer bereits bestehenden SQLite Datenbank aufbauen und bekommt so Details zu den einzelnen in der Datenbank enthaltenen Tabellen präsentiert.
+		Veränderungen des Inhalts einzelner Zellen, Spalten oder Zeilen sind dabei ebenso möglich, genauso wie das Erstellen und Löschen von Einträgen in den Tabellen.
+\end{description}

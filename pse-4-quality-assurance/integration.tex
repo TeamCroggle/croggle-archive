@@ -1,0 +1,41 @@
+\chapter{Integrationstests}
+\section{Controller}
+Für die Überprüfung der fehlerlosen Zusammenarbeit der voneinander abhängigen Systemkomponenten wurde eine Reihe weiterer Testfälle geschrieben.
+Dazu gehören vor allem Tests, die mittels des TestHelpers eine Instanz der AlligatorApp beziehen, da dieser die komplette Applikation in einem "`headless"' Modus (d.h. ohne grafische Ausgabe) aufbaut und bereitstellt.
+Viele der Controller konnten so bereits in einer nahezu "`realen"' Umgebung getestet werden, u.a.
+\begin{description}
+	\item[ProfileController] der ProfileControllerTest beinhaltet Sequenzen zur Verifizierung der Codebereiche, die Informationen zu Profilen in der Datenbank speichern.
+		Hauptsächlich werden hier Profile angelegt, verändert und gelöscht.
+		Aber auch das Setzen und Auslesen des aktuell aktiven Profils mittels libGdx' ApplicationPreferences wird hier überprüft.
+		Hinzu kommen noch Tests zur Benachrichtigungsübermittlung bei Änderungen am derzeitigen Profil an andere Programmteile und die Validierung von Nutzerdaten.
+	\item[SettingController] wird in SettingControllerTest im Zusammenspiel mit dem ProfileManager und in diesem Zusammenhang auch der Datenbank getestet.
+	\item[StatisticController] auch dieser Controller wird in StatisticControllerTest auf die fehlerfreie Zusammenarbeit mit dem ProfileController getestet
+	\item[AchievementController] der entsprechende Testfall interagiert direkt mit dem entsprechenden Datenbankmanager bzw. über den PersistenceManager
+\end{description}
+
+
+\section{Simulator}
+Desweiteren befassen sich mehrere Testfälle in SimulatorTest.java mit der fehlerfreien Funktionsweise des Simulators.
+Dabei wird unter anderem folgendes betrachtet:
+\begin{description}
+	\item[Validierung \& Lastgrenzen] Es existiert ein eigenes Unterpaket (operations.validation) um vom Nutzer eingegebene Konstellationen vor dem Simulationsbeginn auf Validität zu prüfen.
+		Dass die darin enthaltenen Validierer unter den Bedingungen während der Simulation funktionieren, wird im SimulatorTest überprüft.
+		Die Einhaltung der Lastgrenzen bei einer langwierigen Simulation wird durch testStackOverflowIssue getestet.
+		Dabei dürfen keine Fehler passieren, abgesehen von jenen, die bei der Überschreitung der 300-Alligatoren Grenze auftreten.
+	\item[Evaluation] Die Validierung von korrekten Ergebnissen der Simulation wird in mehreren Tests durchgeführt und beinhaltet somit auch die Überprüfung einer ganzen Reihe von "`board.operations"', die an der Evaluation beteiligt sind.
+		Dazu zählen u.a.
+		\begin{itemize}
+			\item CopyConstellation
+			\item ExchangeColor
+			\item FindEating
+			\item uvm...
+		\end{itemize}
+\end{description}
+
+
+\section{Renderer}
+Das wohl größte Modul in Bezug auf Komplexität und Vernetzung mit anderen Subsystemen stellt der BoardActor im "`renderer"'-Paket dar.
+Der BoardActorTest prüft in dieser Hinsicht das Verhalten des Gesamtsystems bei einer sehr langen Simulation.
+Dafür nimmt es den expandierenden Lambda-Term "`$\lambda$g.($\lambda$x.g (x x)) ($\lambda$x.g (x x))"' für eine Simulation und meldet den BoardActor als BoardEventListener an deren Simulator an.
+Bei der anschließenden Simulation muss der BoardActor zuerst die Ausgangskonstellation darstellen ("`layouten"') und anschließend auf alle Änderungen an der Kosntellation reagieren.
+Dies geschieht unter Zuhilfenahme der Funktionen des "`layout"'-Pakets.

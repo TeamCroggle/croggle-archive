@@ -1,0 +1,3 @@
+out/
+# Exclude the lock files of LibreOffice
+.~*

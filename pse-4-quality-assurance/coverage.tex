@@ -1,0 +1,47 @@
+\chapter{Überdeckung}
+
+
+
+\begin{center}
+	\begin{tabular}{ | l | c | c | c | c | c | c |}
+	\hline
+	Package & IC & BC & CI & MI & CB & MB \\ \hline \hline
+	Insgesamt & 89\% & 78\% & 26612 & 3235 & 1378 & 393 \\ \hline
+	de.croggle.ui.screens & 88\% & 72\% & 6093 & 831 & 152 & 58 \\ \hline 
+	de.croggle.ui.renderer & 89\% & 74\% & 4208 & 544 & 222 & 80 \\ \hline
+	de.croggle.ui.renderer.layout & 75\% & 55\% & 1418 & 476 & 69 & 57 \\ \hline
+	de.croggle.util.convert & 88\% & 74\% & 1992 & 267 & 172 & 60  \\ \hline
+	de.croggle.ui.actors & 80\% & 43\% & 985 & 240 & 18 & 24 \\ \hline
+	de.croggle.game & 88\% & 78\% & 1181 & 162 & 70 & 20\\ \hline
+	de.croggle.game.level & 88\% & 70\% & 1025 & 141 & 57 & 25 \\ \hline
+	de.croggle.data & 82\% & 66\% & 477 & 108 & 25 & 13\\ \hline
+	de.croggle.ui.renderer.objectactors & 85\% & 64\% & 589 & 106 & 14 & 8 \\ \hline
+	de.croggle.game.sound & 80\% & 67\% & 320 & 79 & 16 & 8 \\ \hline
+	de.croggle.game.board & 91\% & 97\% & 586 & 60 & 64 & 2\\ \hline
+	de.croggle & 85\% & 75\% & 318 & 56 & 6 & 2  \\ \hline
+	de.croggle.game.board.operations & 97\% & 92\% & 1898 & 49 & 145 & 13 \\ \hline
+	de.croggle.ui & 92\% & 80\% & 346 & 31 & 8 & 2 \\ \hline
+	de.croggle.data.persistence & 96\% & 82\% & 755 & 28 & 55 & 13 \\ \hline
+	de.croggle.backends.sqlite & 55\% & n/a & 30 & 25 & - & - \\ \hline
+	de.croggle.game.event & 87\% & 89\% & 147 & 22 & 16 & 2 \\ \hline
+	de.croggle.board.operations.validation & 98\% & 98\% & 424 & 10 & 40 & 1 \\ \hline
+	de.croggle.game.achievement & 100\% & 100\% & 1489 & 0 & 80 & 0 \\ \hline
+	de.croggle.data.persistence.manager & 100\% & 98\% & 1260 & 0 & 51 & 1 \\ \hline
+	de.croggle.util & 100\% & 100\% & 645 & 0 & 50 & 0 \\ \hline
+	de.croggle.game.profile & 100\% & 92\% & 393 & 0 & 46 & 4  \\ \hline
+	de.croggle.backends & 100\% & 100\% & 33 & 0 & 2 & 0 \\ \hline
+    \end{tabular}
+\end{center}
+
+
+Legende: \\
+	IC = Instruction Coverage \\
+	BC = Branch Coverage \\
+	CI = Covered Instruction \\
+	MI = Missed Instruction \\
+	CB = Covered Branches \\
+	MB = Missed Branches \\
+	n/a: In diesem Fall macht eine Branchabdeckung keinen Sinn da keine Abzweigungen innerhalb des Packages existieren. \\
+
+In dem mit dem Dokument mitgeschickten EclEmma Coverage Report sind diese Daten und mehr in einem interaktiven Format zusammengefasst. 
+Er erlaubt die eingehende Betrachtung der Überdeckung und ermöglicht es die Abdeckung in den einzelnen Paketen, Klassen und Methoden detailliert aufzulisten.

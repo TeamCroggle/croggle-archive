@@ -1,0 +1,35 @@
+\chapter{Gefundene und behobene Bugs}
+\begin{description}
+	\item[Drag\&Drop:] Behebe Fehler, bei dem bereits platzierte Elemente nach Halten und Warten nicht direkt unter der Fingerspitze erschienen
+	\item[Drag\&Drop:] Behebe Fehler, bei dem nach Halten und Warten auf bereits platzierten Elemente der Zoom als Rückmeldung nicht rückgängig gemacht wurde
+	\item[Multiple Choice:] Verbiete das Übergehen in die Simulation ohne eine Antwort gewählt zu haben
+	\item[Alpha-Äquivalenz:] Behebe Fehler beim Vergleich zweier Bäume auf Alpha-Äquivalenz
+	\item[Lastgrenze:] Selbst bei nur 300 Elemente großen Konstellationen kam es durch das Visitor-Pattern an einigen Stellen während der Simulation zu StackOverflowExceptions. 
+		Dies wurde durch Modifikation und teilweise Neuimplementierung der folgenden Operationen behoben:
+		\begin{itemize}
+			\item BoardObject.copy
+			\item GetParentHierarchy
+			\item CountBoardObjects
+			\item ActorLayouter
+			\item CreateWidthMap
+			\item CreateHeightMap
+		\end{itemize}
+	\item[Alligatoren $\rightarrow$ Json] Behebe Fehler bei der Konvertierung, wo ungeprüft auf das Elternelement von Eiern zugegriffen wurde, wodurch NullPointerEcxeptions auftreten konnten.
+	\item[Json $\rightarrow$ Alligatoren] Korrigiere falsche Annahme zu libGdx' JsonValue.hasChild(String), wo davon ausgegangen wurde, dass "`wahr"' zurückgegeben wird, falls ein Kind mit dem Namen im String existiert. 
+		Stattdessen besagt die Dokumentation allerdings, dass zurückgegeben wird, ob ein Kind mit dem gegebenen Namen ein Kind hat.
+	\item[Zeitgesteuerte Aktionen] Es existiert ein Fehler in libGdx, der bei einer unglücklichen Sequenz von "`App verlassen"' "`warten"' "`App wieder starten"' dazu führt, dass das Timer-Werkzeug nicht mehr funktioniert.
+		Dieser Fehler wurde durch einen Workaround umgangen, bis das Problem in libGdx behoben ist. Siehe dazu als Referenz \url{https://github.com/libgdx/libgdx/issues/1548}.
+	\item[Laden und Speichern von Benutzernamen] Beim Erstellen und Laden von Benutzern, deren Namen ein oder mehrere Apostrophe enthielten, konnte es zu Abstürzen der Applikation kommen. 
+		Der Grund hierfür war, dass die Apostrophe die Syntax der SQL SELECT Anweisung, welche zum Laden bestimmter Einträge in der SQL Datenbank verwendet wird, so verändert hatte, dass sie nicht mehr ausgewertet werden konnten und es zu ungefangenen SQLExceptions kam. 
+		Der Fehler wurde behoben indem Strings nun nicht mehr direkt in die SELECT Anweisung eingefügt, sondern als Argumente in die "`query"'-Methode übergeben werden.
+	\item[Lambdaterm $\rightarrow$ Alligatoren] Behebe Endlosschleife falls in einem Term zu viele Bindungsseparatoren vorkommen.
+	\item[Lambdaterm $\rightarrow$ Alligatoren] Behebe StringIndexOutOfBoundsException falls in einem Term zu wenige Bindungsseparatoren vorkommen.
+	\item[Lambdaterm $\rightarrow$ Alligatoren] Gib Fehler zurück, falls in einem Term eine Abstraktion keine Variable bindet.
+	\item[Farbenblindenmodus] Behebe Fehler, der dazu führte, dass nach einer Änderung der Einstellung bezüglich des Farbenblindenmodus Objekte aus der Objektleiste im falschen Modus dargestellt wurden.
+	\item[Lokalisierung] Ersetze Strings, die noch nicht lokalisierbar waren.
+	\item[Hauptmenü] Verändere das Layout dahingehend, dass nicht mehr in manchen Fällen die Titelgrafik zu groß repräsentiert wird, und so den Rest des Menüs staucht. 
+
+	\item[Simulator] Überprüfe das Eingabeboard auch auf fehlende Kinder bei AgedAlligators, nicht wie zuvor nur bei ColoredAlligators.
+\end{description}
+
+
