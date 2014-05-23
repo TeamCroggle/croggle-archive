@@ -1,0 +1,11 @@
+Croggle ist ein Lernspiel für Kinder ab dem achten Lebensjahr.
+Entstanden an der Informatik Fakultät des Karlsruher Instituts für Technologie, fokussiert sich die App auf das vermitteln der Grundkonzepte des Lambda-Kalküls.
+Die Grundidee ist hierbei, die verschiedenen Bestandteile des Kalküls durch eine Analogie zu Alligatoren und ihrem Fressverhalten herzustellen.
+Sie stammt von Bret Victor und fand in der Vergangenheit große internationale Beliebtheit in der akademischen Lehre.
+Croggle bringt dieses Prinzip auf mobile Endgeräte, sowie sekundär auch auf den Desktop.
+Angereichert mit liebevoll gezeichneten Grafiken bietet die Applikation einen Kindgerechten Einstieg in die Welt der funktionalen Programmierung.
+Hinzu kommen noch verständliche Tutorials, Mehrbenutzerfunktionalitäten und Erfolge.
+Zuletzt enthält die App sogar einen Muster-Modus, der auf farbliche Unterscheidungen verzichtet, was auch Kindern mit Einschränkungen bei der Farbempfindung die Nutzung ermöglicht.
+Durch die Veröffentlichung des Quellcodes als Open Source auf Github (siehe Projektwebseite) kann zudem jederzeit hinter die Kulissen geschaut werden.
+Die App befindet sich derzeit in der aktiven Entwicklung, wodurch es noch zu weiteren Verbesserungen am Nutzererlebnis kommen wird.
+Insgesamt ist die App jedoch stabil und die gesamte Funktionalität bereits enthalten.

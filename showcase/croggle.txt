@@ -1,0 +1,9 @@
+Help the alligators play their favorite game: Croggle!
+Tap them to change their colors, drag them to their place or simply choose what will happen according to the game's rules.
+There has never been so much fun in the swamps.
+
+And it never stops: Both versions for desktop (Windows/Mac/Linux) and Android are available.
+Download for FREE!
+
+Parents only: 
+Get your children in contact with the Lambda-calculus as early as possible. Learning the most basic concepts of functional programming has never been so easy. Inspired by the great game idea by Bret Victor, croggle brings a fully featured* simulator, statistics, multi-user and much more - all nicely packed into the intuitive interface of a modern game.
